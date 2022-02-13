@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React, { useEffect } from 'react'
+import { Tasks } from './components/tasks/tasks'
+import { Routes, Route, Link } from 'react-router-dom'
+import { TaskPage } from './components/task/task'
+
+import { useDispatch } from 'react-redux'
+import { fetchData, fetchTags } from './redux/actions'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchData())
+    dispatch(fetchTags())
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Link to="/">Главная</Link> */}
+      <Tasks />
+      {/* <Routes>
+        <Route exact path="/" element={<Tasks />} />
+        <Route exact path="/todos/:task_id" element={<TaskPage />} />
+      </Routes> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

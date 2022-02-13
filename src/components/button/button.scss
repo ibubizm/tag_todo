@@ -1,0 +1,50 @@
+@import '../../vars.scss';
+
+.btn {
+  text-transform: uppercase;
+  color: $white;
+  padding: 6px 10px;
+  outline: none;
+  background-color: $gray;
+  border-radius: 3px;
+  border: 0;
+  transition: all ease 0.2s;
+  &:hover {
+    background: lighten($gray, 10%);
+    cursor: pointer;
+  }
+}
+
+.blue {
+  background: $blue;
+  margin-right: 5px;
+  &:hover {
+    background: darken($blue, 10%);
+  }
+}
+
+.red {
+  background: $red;
+  &:hover {
+    background: darken($red, 10%);
+  }
+}
+
+.beruza {
+  background: $beruza;
+  &:hover {
+    background: darken($beruza, 10%);
+  }
+}
+
+.gray {
+  background: $gray;
+  color: black;
+  &:hover {
+    background: darken($gray, 10%);
+  }
+}
+
+.green {
+  background: $green;
+}

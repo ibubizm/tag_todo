@@ -1,0 +1,21 @@
+.tasks {
+  width: 600px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.list_item {
+  border: 1px solid;
+  margin-bottom: 3px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list__tags {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+}

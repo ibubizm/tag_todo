@@ -1,0 +1,36 @@
+@import '../../vars.scss';
+
+.item {
+  border: 1px solid $gray;
+  margin-bottom: 10px;
+
+  &__content {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    display: flex;
+  }
+}
+
+.tags {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  margin: 5px;
+  margin-top: 25px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: $beruza;
+  padding: 5px 10px;
+  margin-right: 5px;
+
+  &__delete {
+    height: 15px;
+  }
+}
