@@ -6,9 +6,12 @@ import { Modal } from '../modal/modal'
 import { Button } from '../button/button'
 import { Input } from '../input/input'
 import { Tag } from '../tags/tags'
+import './task.scss'
+import { useSelector } from 'react-redux'
 
 export const ListItem = ({ item }) => {
   const [tags, setTags] = useState([])
+  const t = useSelector(({ tags }) => tags)
   const [visible, setVisible] = useState(false)
   const [value, setValue] = useState('')
   const dispatch = useDispatch()
@@ -22,7 +25,7 @@ export const ListItem = ({ item }) => {
     e.preventDefault()
     const spl = value.split(' ')
     spl.forEach((i) => {
-      if (i[0] === '#') {
+      if (i[0] === '#' && i[1]) {
         dispatch(createTag(item.id, i))
       }
     })
@@ -32,7 +35,7 @@ export const ListItem = ({ item }) => {
 
   useEffect(() => {
     getTags(item.id)
-  }, [])
+  }, [t])
 
   return (
     <div className="item">

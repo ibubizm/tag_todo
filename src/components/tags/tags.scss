@@ -1,0 +1,14 @@
+@import '../../vars.scss';
+
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: $beruza;
+  padding: 5px 10px;
+  margin-right: 5px;
+
+  &__delete {
+    height: 15px;
+    cursor: pointer;
+  }
+}

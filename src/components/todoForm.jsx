@@ -16,12 +16,6 @@ export const TodoForm = ({ onClose }) => {
     e.preventDefault()
     e.stopPropagation()
     dispatch(createTask(input))
-    // const spl = input.split(' ')
-    // spl.forEach((i) => {
-    //   if (i[0] === '#') {
-    //     dispatch(createTag(item.id, i))
-    //   }
-    // })
     setInput('')
     onClose()
   }

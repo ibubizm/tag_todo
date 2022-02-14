@@ -1,14 +1,14 @@
 const initialState = {
   todos: [],
   tags: [],
-  test: [],
   currentTag: null,
 }
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_TASKS':
-      return { ...state, todos: [...state.todos, ...action.payload] }
+      return { ...state, todos: action.payload }
+    // [...state.todos, ...action.payload]
     case 'ADD_TASK':
       return {
         ...state,

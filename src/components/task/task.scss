@@ -14,23 +14,3 @@
     display: flex;
   }
 }
-
-.tags {
-  display: flex;
-  width: 100%;
-  overflow: auto;
-  margin: 5px;
-  margin-top: 25px;
-}
-
-.tag {
-  display: flex;
-  align-items: center;
-  background-color: $beruza;
-  padding: 5px 10px;
-  margin-right: 5px;
-
-  &__delete {
-    height: 15px;
-  }
-}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './tags.scss'
 import close from '../modal/close.svg'
 import { useDispatch } from 'react-redux'
 import { deleteTag, filtredTasks } from '../../redux/actions'
